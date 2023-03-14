@@ -16,6 +16,7 @@ sprite_group = pygame.sprite.Group()
 for layer in tmx_data.visible_layers:
 	# if layer.name in ('Floor', 'Plants and rocks', 'Pipes')
 	if hasattr(layer,'data'):
+		print(layer)
 		for x,y,surf in layer.tiles():
 			pos = (x * 128, y * 128)
 			Tile(pos = pos, surf = surf, groups = sprite_group)
